@@ -128,7 +128,15 @@ class TWW3Context(CommonContext):
         self.locationLookup = dict()
         for key, entry in location_table.items():
             self.locationLookup[entry['name']] = int(key)
-        self.playerFaction = lord_name_to_faction_dict[args['slot_data']['PlayerFaction']]
+
+        self.playerFaction = lord_name_to_faction_dict[args['slot_data']['starting_faction']]
+
+        factionReadable = self.playerFaction #In case anything is broken
+        for key, value in lord_name_to_faction_dict.items():
+            if value == self.playerFaction:
+                factionReadable = faction_name_to_readable[key]
+        logger.info("The Player Faction is: " + factionReadable)
+        
         logger.info("The Player Faction is: " + self.playerFaction)
         self.randitemList = args['slot_data']['Items']
         self.goalNumber = args['slot_data']['DominationGoal']
