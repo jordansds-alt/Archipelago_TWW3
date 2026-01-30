@@ -169,7 +169,7 @@ class SphereDistance(Range):
     # Min Range between Settlements is 24. Max Range is 1300.
     range_start = 20
     range_end = 500
-    default = 300
+    default = 150
 
 class SphereWorld(Toggle):
     """Should Settlements outside last Sphere be included in the last Sphere? 
@@ -215,7 +215,7 @@ class ExtraDominationOrbs(Range):
     """How many extra Domination Orbs should be in the game in addition to the ones required."""
     range_start = 1
     range_end = 50
-    default = 0
+    default = 1
 
 class filler_weak(Range):
     """Weight of weak filler items.
