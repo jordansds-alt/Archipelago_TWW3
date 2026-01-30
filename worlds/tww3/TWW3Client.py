@@ -3,7 +3,7 @@ import Utils
 import asyncio
 import colorama
 import logging
-from .locations_table.settlements import lord_name_to_faction_dict
+from .locations_table.settlements import lord_name_to_faction_dict, faction_name_to_readable
 from .item_tables.items import ItemType
 from .item_tables.progression_table import progression_table
 from .item_tables.filler_item_table import filler_weak_table, filler_strong_table, trap_harmless_table, trap_weak_table, trap_strong_table
